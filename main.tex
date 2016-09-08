@@ -1,0 +1,98 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[ngerman, a4]{scrartcl}
+
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\usepackage{fontspec}
+
+\usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}}
+
+\usepackage[ngerman]{babel}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+\usepackage{%
+%            tabularx,
+            amsmath,
+%            amsfonts,
+%            amssymb,
+%            graphicx,
+%            geometry,
+            url,
+            hyperref,
+            pgf,
+            % mdframed,
+            tikz,
+            mathtools,
+            color,
+            blindtext,
+            fancyhdr,
+            % multicol,
+            microtype,
+            % appendixnumberbeamer,
+            cleveref,
+}
+
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+
+\usepackage[natbib=true, style=numeric]{biblatex}
+
+\AtEveryBibitem{%
+  \ifentrytype{online}{%
+  }{%
+    \clearfield{urlyear}%
+  }%
+}
+
+\AtEveryBibitem{%
+  \iffieldundef{doi}{%
+  }{%
+    \clearfield{url}%
+  }%
+}
+
+\newcommand{\dif}{\mathrm d}
+\newcommand{\lagrange}{\ensuremath{\mathcal{L}}}
+\newcommand{\oldphi}{\phi}
+\renewcommand{\phi}{\varphi}
+\newcommand{\oldepsilon}{\epsilon}
+\renewcommand{\epsilon}{\varepsilon}
+
+\newcommand{\captionbreak}{\\[-1.5em]}
+
+\newcommand{\todo}[1]{\textcolor{red}{\large \emph{TODO:} #1}}
+
+\newcommand{\name}[1]{\textsc{#1}}
+
+\input{xvec.tex}
+
+\bibliography{literature}
+
+\title{\XeLaTeX-Template}
+\subtitle{Untertitel}
+\author{Max Mustermann}
+\date{\today}
+% \institute{}
+
+\begin{document}
+    \maketitle
+
+    \begin{abstract}
+        \blindtext
+    \end{abstract}
+
+    \tableofcontents
+
+    \newpage
+
+    \blindmathtrue
+    \Blinddocument
+
+    \newpage
+    \appendix
+
+    \printbibliography
+
+\end{document}
