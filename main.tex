@@ -41,18 +41,18 @@
 
 \usepackage[natbib=true, style=numeric]{biblatex}
 
-\AtEveryBibitem{%
-  \ifentrytype{online}{%
-  }{%
-    \clearfield{urlyear}%
-  }%
+\AtEveryBibitem{
+  \ifentrytype{online}{
+  }{
+    \clearfield{urlyear}
+  }
 }
 
-\AtEveryBibitem{%
-  \iffieldundef{doi}{%
-  }{%
-    \clearfield{url}%
-  }%
+\AtEveryBibitem{
+  \iffieldundef{doi}{
+  }{
+    \clearfield{url}
+  }
 }
 
 \newcommand{\dif}{\mathrm d}
