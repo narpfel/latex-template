@@ -7,7 +7,11 @@
 \usepackage{fontspec}
 
 \usepackage{siunitx}
-\sisetup{output-decimal-marker = {,}}
+\sisetup{
+    output-decimal-marker = {,},
+    per-mode = fraction,
+    separate-uncertainty = true,
+}
 
 \usepackage[ngerman]{babel}
 \usepackage[autostyle=true,german=quotes]{csquotes}
