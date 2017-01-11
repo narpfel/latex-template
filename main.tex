@@ -41,7 +41,7 @@
 % \usepackage{pgfpages}
 % \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
-\usepackage[natbib=true, style=numeric]{biblatex}
+\usepackage[style=numeric]{biblatex}
 
 \AtEveryBibitem{
   \ifentrytype{online}{
@@ -72,7 +72,7 @@
 
 \input{xvec.tex}
 
-\bibliography{literature}
+\addbibresource{literature.bib}
 
 \title{\XeLaTeX-Template}
 \subtitle{Untertitel}
