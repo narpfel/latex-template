@@ -2,8 +2,10 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[ngerman, a4]{scrartcl}
 
-\input{preamble.tex}
-\input{document.tex}
+\usepackage{import}
+
+\subimport{./}{preamble.tex}
+\subimport{./}{document.tex}
 
 \addbibresource{literature.bib}
 
