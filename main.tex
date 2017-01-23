@@ -2,88 +2,10 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[ngerman, a4]{scrartcl}
 
-\usepackage{fontspec}
-
-\usepackage{siunitx}
-\sisetup{
-    output-decimal-marker = {,},
-    per-mode = fraction,
-    separate-uncertainty = true,
-}
-
-\usepackage[ngerman]{babel}
-\usepackage[autostyle=true,german=quotes]{csquotes}
-\usepackage{selnolig}
-\usepackage[ngerman]{isodate}
-
-\usepackage{
-    % tabularx,
-    amsmath,
-    % amsfonts,
-    % amssymb,
-    % graphicx,
-    % geometry,
-    url,
-    hyperref,
-    pgf,
-    % mdframed,
-    tikz,
-    mathtools,
-    color,
-    blindtext,
-    fancyhdr,
-    % multicol,
-    microtype,
-    % appendixnumberbeamer,
-    cleveref,
-    setspace,
-}
-
-% \usepackage{pgfpages}
-% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
-
-\usepackage[style=numeric]{biblatex}
-
-\AtEveryBibitem{
-  \ifentrytype{online}{
-  }{
-    \clearfield{urlyear}
-  }
-}
-
-\AtEveryBibitem{
-  \iffieldundef{doi}{
-  }{
-    \clearfield{url}
-  }
-}
-
-
-\usepackage{acronym}
-
-
-\newcommand{\dif}{\mathrm d}
-\newcommand{\lagrange}{\ensuremath{\mathcal{L}}}
-\newcommand{\oldphi}{\phi}
-\renewcommand{\phi}{\varphi}
-\newcommand{\oldepsilon}{\epsilon}
-\renewcommand{\epsilon}{\varepsilon}
-
-\newcommand{\captionbreak}{\\[-1.5em]}
-
-\newcommand{\todo}[1]{\textcolor{red}{\large \emph{TODO:} #1}}
-
-\newcommand{\name}[1]{\textsc{#1}}
-
-\input{xvec.tex}
+\input{preamble.tex}
+\input{document.tex}
 
 \addbibresource{literature.bib}
-
-\title{\XeLaTeX-Template}
-\subtitle{Untertitel}
-\author{Max Mustermann}
-\date{\today}
-% \institute{}
 
 \begin{document}
     \input{titlepage.tex}
